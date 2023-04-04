@@ -22,3 +22,16 @@ textarea,
   outline: none;
   border: none;
 }
+
+@layer base {
+  :root {
+    --primary: #e0b1ff;
+    --secondary: #b343ff;
+    --bg-main: #353648;
+    // --bg-rainbow: url('https://templatekit.jegtheme.com/vironic/wp-content/uploads/sites/283/2022/05/rainbow-gradient-background-with-neon-led-light-e1653826555239.jpg');
+    --bg-rainbow: url('src/assets/images/rainbow.jpg');
+    --overlay: rgba(2, 5, 27, 0.8);
+    --shadow-product-item: inset 5px 5px 10px #786cb7,
+            inset -5px -5px 10px #c0acff;
+  }
+}
