@@ -1,6 +1,7 @@
 import routesConfigs from '~/configs/routes';
 import Home from '~/pages/Home';
 import ProductList from '~/pages/ProductList';
+import Upload from '~/pages/Upload';
 
 const routes = [
   {
@@ -10,6 +11,10 @@ const routes = [
   {
     path: routesConfigs.products,
     element: <ProductList />,
+  },
+  {
+    path: routesConfigs.upload,
+    element: <Upload />,
   },
 ];
 
