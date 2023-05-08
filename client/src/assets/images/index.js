@@ -8,6 +8,7 @@ const images = {
   // logoIcon: require('~/assets/images/logo-icon.png'),
   logoIcon,
   homeImage,
+  signInImage: 'https://colorlib.com/etc/lf/Login_v1/images/img-01.png',
 };
 
 export default images;
