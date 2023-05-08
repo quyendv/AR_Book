@@ -1,7 +1,8 @@
-import routesConfigs from '~/configs/routes';
+import { Fragment } from 'react';
+import routesConfigs from '~/configs/routes.config';
+import Camera from '~/pages/Camera';
 import Home from '~/pages/Home';
 import ProductList from '~/pages/ProductList';
-import Upload from '~/pages/Upload';
 
 const routes = [
   {
@@ -13,8 +14,9 @@ const routes = [
     element: <ProductList />,
   },
   {
-    path: routesConfigs.upload,
-    element: <Upload />,
+    path: routesConfigs.camera,
+    element: <Camera />,
+    layout: Fragment,
   },
 ];
 

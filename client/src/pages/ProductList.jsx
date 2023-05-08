@@ -1,93 +1,11 @@
-import { useMemo } from 'react';
+// @ts-nocheck
 import ProductItem from '~/components/common/ProductItem';
 
 function ProductList() {
-  const imageTargets = useMemo(
-    () => [
-      {
-        id: 'marker1',
-        url: 'https://topcv-clone.s3.ap-southeast-1.amazonaws.com/model_2',
-        modelUrl: 'https://topcv-clone.s3.ap-southeast-1.amazonaws.com/chinese_pottery_vase.glb',
-      },
-      {
-        id: 'marker2',
-        url: 'https://topcv-clone.s3.ap-southeast-1.amazonaws.com/model_3',
-        modelUrl: 'https://topcv-clone.s3.ap-southeast-1.amazonaws.com/pharaonic_pottery.glb',
-      },
-    ],
-    [],
-  );
-
-  // useLayoutEffect(() => {
-  //   AFRAME.registerComponent('nft-api-call', {
-  //     init: function () {
-  //       const markerId = this.el.getAttribute('id');
-  //       this.el.addEventListener('markerFound', () => {
-  //         console.log(markerId);
-  //       });
-  //     },
-  //   });
-  // }, []);
-
   return (
-    <div className="z-10 grid grid-cols-5 gap-x-2 gap-y-3 p-10">
+    <main className="z-10 grid grid-cols-5 gap-x-2 gap-y-3 p-10">
       <ProductItem />
-    </div>
-
-    // <a-scene
-    //   vr-mode-ui="enabled: false;"
-    //   renderer="logarithmicDepthBuffer: true;"
-    //   embedded
-    //   arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
-    // >
-    //   <a-assets>
-    //     {imageTargets?.map((item, index) => (
-    //       <a-asset-item key={index} id={item.id} src={item.modelUrl}></a-asset-item>
-    //     ))}
-    //   </a-assets>
-
-    //   <a-nft
-    //     id="444"
-    //     type="nft"
-    //     url="https://topcv-clone.s3.ap-southeast-1.amazonaws.com/model_2"
-    //     smooth="true"
-    //     smoothCount="10"
-    //     smoothTolerance=".01"
-    //     smoothThreshold="5"
-    //     // nft-api-call
-    //   >
-    //     <a-entity id="model-container" position="0 0 -5">
-    //       <a-entity
-    //         gltf-model="#maker1"
-    //         scale="2 2 2"
-    //         animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-    //         rotation="0 0 0"
-    //       ></a-entity>
-    //     </a-entity>
-    //   </a-nft>
-
-    //   <a-nft
-    //     id="555"
-    //     type="nft"
-    //     url="https://topcv-clone.s3.ap-southeast-1.amazonaws.com/model_3"
-    //     smooth="true"
-    //     smoothCount="10"
-    //     smoothTolerance=".01"
-    //     smoothThreshold="5"
-    //     // nft-api-call
-    //   >
-    //     <a-entity id="model-container" position="0 0 -5">
-    //       <a-entity
-    //         gltf-model="#maker2"
-    //         scale="50 50 50"
-    //         animation__rotate="property: rotation; to: 0 360 0; loop: true; dur: 10000"
-    //         rotation="0 0 0"
-    //       ></a-entity>
-    //     </a-entity>
-    //   </a-nft>
-
-    //   <a-entity camera position="0 0 0"></a-entity>
-    // </a-scene>
+    </main>
   );
 }
 

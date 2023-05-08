@@ -1,7 +1,6 @@
 import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import MainLayout from '~/components/layouts/MainLayout';
 import routes from '~/routes';
-import 'aframe';
 
 function App() {
   return (

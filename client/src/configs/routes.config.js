@@ -1,7 +1,7 @@
 const routesConfigs = {
   home: '/',
   products: '/products',
-  upload: '/upload',
+  camera: '/camera',
 }
 
 export default routesConfigs;
