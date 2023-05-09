@@ -10,11 +10,14 @@
   },
   "dependencies": {
     "@ar-js-org/ar.js": "^3.4.5",
+    "@reduxjs/toolkit": "^1.9.5",
+    "@tippyjs/react": "^4.2.6",
     "aframe": "^1.4.2",
     "ar.js": "^2.0.8",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.10.0"
   },
   "devDependencies": {

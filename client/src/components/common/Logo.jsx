@@ -6,7 +6,7 @@ export function Logo() {
   return (
     <Link to={routesConfigs.home} className="flex items-center gap-4">
       <img className="inline-block h-12 w-12 object-cover" src={images.logoIcon} alt="logo-icon" />
-      <span className="text-4xl font-bold tracking-wider text-secondary">AR Book</span>
+      <span className="transition-all text-2xl sm:text-3xl md:text-4xl font-bold tracking-wider text-secondary">AR Book</span>
     </Link>
   );
 }
