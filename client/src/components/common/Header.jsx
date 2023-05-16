@@ -2,15 +2,18 @@ import { useMemo } from 'react';
 import { AiFillCaretDown, AiOutlineCamera } from 'react-icons/ai';
 import { FaListUl } from 'react-icons/fa';
 import { FiLogOut } from 'react-icons/fi';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import images from '~/assets/images';
 import routesConfigs from '~/configs/routes.config';
+import { setUser } from '~/redux/features/userSlice';
 import { Logo } from './Logo';
 import { PopperMenu } from './PopperMenu';
 
 function Header() {
   const { user } = useSelector((state) => state.user);
+  const dispatch = useDispatch();
+
   const userPopperMenu = useMemo(
     () => [
       {
@@ -26,6 +29,7 @@ function Header() {
       {
         title: 'Logout',
         icon: FiLogOut,
+        onClick: () => dispatch(setUser(null)),
       },
     ],
     [],

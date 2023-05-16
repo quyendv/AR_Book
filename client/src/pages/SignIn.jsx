@@ -1,12 +1,22 @@
 import { useState } from 'react';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import images from '~/assets/images';
+import routesConfigs from '~/configs/routes.config';
+import { setUser } from '~/redux/features/userSlice';
 
 export function SignIn() {
-  const [user, setUser] = useState({});
+  const [userData, setUserData] = useState({ email: null, password: null });
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleSubmitForm = () => {
-    console.log(user);
+  const handleSubmitForm = (e) => {
+    // e.preventDefault();
+    if (userData.email === 'admin@gmail.com' && userData.password === 'pwad123123') {
+      dispatch(setUser(userData));
+      navigate(routesConfigs.home);
+    }
   };
 
   return (
@@ -21,7 +31,7 @@ export function SignIn() {
             type="email"
             className="peer w-full bg-transparent p-2 pl-10 text-secondary"
             placeholder="Email"
-            onChange={(e) => setUser({ ...user, email: e.target.value })}
+            onChange={(e) => setUserData({ ...userData, email: e.target.value })}
           />
           <label className="absolute left-3 top-1/2 -translate-y-1/2 text-white transition-all peer-focus:text-secondary peer-[:not(:placeholder-shown)]:text-secondary">
             <FaEnvelope />
@@ -32,7 +42,7 @@ export function SignIn() {
             type="password"
             className="peer w-full bg-transparent p-2 pl-10 text-secondary"
             placeholder="Password"
-            onChange={(e) => setUser({ ...user, password: e.target.value })}
+            onChange={(e) => setUserData({ ...userData, password: e.target.value })}
           />
           <label className="absolute left-3 top-1/2 -translate-y-1/2 text-white transition-all peer-focus:text-secondary peer-[:not(:placeholder-shown)]:text-secondary">
             <FaLock />
@@ -40,7 +50,7 @@ export function SignIn() {
         </div>
         <button
           className="mt-8 rounded-full bg-purple-500 p-2 text-xl font-semibold tracking-wider text-white"
-          type="button"
+          type="submit"
           onClick={handleSubmitForm}
         >
           Login

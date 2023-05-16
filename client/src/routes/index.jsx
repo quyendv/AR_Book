@@ -1,4 +1,5 @@
 import { Fragment } from 'react';
+import ProtectedPage from '~/components/common/ProtectedPage';
 import { AuthLayout } from '~/components/layouts/AuthLayout';
 import routesConfigs from '~/configs/routes.config';
 import Camera from '~/pages/Camera';
@@ -13,11 +14,19 @@ const routes = [
   },
   {
     path: routesConfigs.models,
-    element: <ModelList />,
+    element: (
+      <ProtectedPage>
+        <ModelList />
+      </ProtectedPage>
+    ),
   },
   {
     path: routesConfigs.camera,
-    element: <Camera />,
+    element: (
+      <ProtectedPage>
+        <Camera />
+      </ProtectedPage>
+    ),
     layout: Fragment,
   },
   {
