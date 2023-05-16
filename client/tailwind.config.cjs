@@ -20,9 +20,6 @@ module.exports = {
       backgroundImage: {
         rainbow: 'var(--bg-rainbow)',
       },
-      boxShadow: {
-        productItem: 'var(--shadow-product-item)',
-      },
     },
   },
   plugins: [],

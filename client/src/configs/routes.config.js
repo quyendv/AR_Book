@@ -1,6 +1,6 @@
 const routesConfigs = {
   home: '/',
-  products: '/products',
+  models: '/models',
   camera: '/camera',
   signin: '/signin',
 };

@@ -3,7 +3,7 @@ import { AuthLayout } from '~/components/layouts/AuthLayout';
 import routesConfigs from '~/configs/routes.config';
 import Camera from '~/pages/Camera';
 import Home from '~/pages/Home';
-import ProductList from '~/pages/ProductList';
+import ModelList from '~/pages/ModelList';
 import { SignIn } from '~/pages/SignIn';
 
 const routes = [
@@ -12,8 +12,8 @@ const routes = [
     element: <Home />,
   },
   {
-    path: routesConfigs.products,
-    element: <ProductList />,
+    path: routesConfigs.models,
+    element: <ModelList />,
   },
   {
     path: routesConfigs.camera,
@@ -23,8 +23,8 @@ const routes = [
   {
     path: routesConfigs.signin,
     element: <SignIn />,
-    layout: AuthLayout
-  }
+    layout: AuthLayout,
+  },
 ];
 
 export default routes;

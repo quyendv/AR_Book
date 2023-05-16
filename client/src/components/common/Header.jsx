@@ -14,9 +14,9 @@ function Header() {
   const userPopperMenu = useMemo(
     () => [
       {
-        title: 'Products',
+        title: 'Models',
         icon: FaListUl,
-        to: routesConfigs.products,
+        to: routesConfigs.models,
       },
       {
         title: 'Camera',
@@ -54,9 +54,9 @@ function Header() {
               isActive ? 'text-purple-600' : 'text-white hover:opacity-80'
             }`
           }
-          to={routesConfigs.products}
+          to={routesConfigs.models}
         >
-          Products
+          Models
         </NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -77,7 +77,7 @@ function Header() {
             <img src={images.admin} className="h-full w-full object-cover" />
           </div>
           <PopperMenu menu={userPopperMenu} appendBody>
-            <button className="block p-2 text-white :active">
+            <button className=":active block p-2 text-white">
               <AiFillCaretDown />
             </button>
           </PopperMenu>
