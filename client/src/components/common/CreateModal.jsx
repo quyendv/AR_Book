@@ -8,10 +8,11 @@ function CreateModal() {
   const { createModal } = useSelector((state) => state.global);
   const dispatch = useDispatch();
 
-  const ref1 = useRef();
-  const ref2 = useRef();
-  const ref3 = useRef();
-  const ref4 = useRef();
+  const ref1 = useRef(); // iset
+  const ref2 = useRef(); // fset
+  const ref3 = useRef(); // fset3
+  const ref4 = useRef(); // glb
+  const ref5 = useRef(); // image
 
   const sendRequest = async (ref) => {
     const formData = new FormData();
@@ -27,6 +28,8 @@ function CreateModal() {
     sendRequest(ref2);
     sendRequest(ref3);
     sendRequest(ref4);
+    sendRequest(ref5);
+    dispatch(setCreateModal(false));
   };
 
   return (
@@ -65,7 +68,9 @@ function CreateModal() {
           {/* Modal Body */}
           <div className="grid grid-cols-1 gap-x-2 gap-y-2 p-6 md:grid-cols-2">
             <div>
-              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">File .iset</label>
+              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">
+                File <span className="text-red-500">.iset</span>
+              </label>
               <input
                 ref={ref1}
                 className="w-full cursor-pointer bg-gray-100 text-gray-900"
@@ -75,7 +80,9 @@ function CreateModal() {
               />
             </div>
             <div>
-              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">File .fset</label>
+              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">
+                File <span className="text-red-500">.fset</span>
+              </label>
               <input
                 ref={ref2}
                 className="w-full cursor-pointer bg-gray-100 text-gray-900"
@@ -85,7 +92,9 @@ function CreateModal() {
               />
             </div>
             <div>
-              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">File .fset3</label>
+              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">
+                File <span className="text-red-500">.fset3</span>
+              </label>
               <input
                 ref={ref3}
                 className="w-full cursor-pointer bg-gray-100 text-gray-900"
@@ -95,12 +104,26 @@ function CreateModal() {
               />
             </div>
             <div>
-              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">File .glb</label>
+              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">
+                File <span className="text-red-500">.glb</span>
+              </label>
               <input
                 ref={ref4}
                 className="w-full cursor-pointer bg-gray-100 text-gray-900"
                 type="file"
                 accept=".glb"
+                required
+              />
+            </div>
+            <div>
+              <label className="mb-2 block text-lg font-medium text-gray-900 dark:text-white">
+                <span className="text-red-500">Image</span> for model
+              </label>
+              <input
+                ref={ref5}
+                className="w-full cursor-pointer bg-gray-100 text-gray-900"
+                type="file"
+                accept="image/*"
                 required
               />
             </div>

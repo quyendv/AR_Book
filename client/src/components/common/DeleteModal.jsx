@@ -13,6 +13,7 @@ function DeleteModal() {
       await modelApi.delete({ id: `${deletedFileName}.fset` });
       await modelApi.delete({ id: `${deletedFileName}.fset3` });
       await modelApi.delete({ id: `${deletedFileName}.glb` });
+      await modelApi.delete({ id: `${deletedFileName}.png` });
     };
     deleteFile();
     dispatch(setDeleteModal({ status: false, filename: null }));
